@@ -1,0 +1,72 @@
+.list-container {
+  padding-bottom: 30px;
+}
+.time-accessed {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  padding-right: 20px;
+  font-size: 20px;
+  color: #475569;
+}
+.list-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-and-domain-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.title-and-domain-name {
+  padding-left: 20px;
+}
+.title {
+  font-family: roboto;
+  font-size: 26px;
+  color: #475569;
+}
+.domain-url {
+  font-family: roboto;
+  padding: 0;
+  margin: 0;
+  line-height: 0px;
+  color: #64748b;
+}
+.items-and-delete-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.delete-image {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .list-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .title-and-domain-name {
+    display: flex;
+    flex-direction: row;
+  }
+  .domain-url {
+    padding-top: 43px;
+    padding-left: 20px;
+  }
+
+  .time-accessed {
+    padding-right: 20px;
+    padding-top: 10px;
+  }
+  .list-items-2 {
+    display: flex;
+    flex-direction: row;
+  }
+}
