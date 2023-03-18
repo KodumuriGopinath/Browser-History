@@ -7,7 +7,7 @@ import './index.css'
 class HistoryView extends Component {
   state = {
     searchInput: '',
-    historyList: [],
+    initialHistoryList: this.props,
   }
 
   onInputSearch = event => {
@@ -15,7 +15,10 @@ class HistoryView extends Component {
   }
 
   deleteItem = id => {
-    const {initialHistoryList} = this.props
+    const {initialHistoryList} = this.state
+    const filteredListDate = initialHistoryList.filter(every => every.id !== id)
+
+    this.setState({initialHistoryList: filteredListDate})
   }
 
   render() {
@@ -25,6 +28,11 @@ class HistoryView extends Component {
     const searchResults = initialHistoryList.filter(eachList =>
       eachList.title.toLowerCase().includes(searchInput.toLowerCase()),
     )
+
+    let EmptyList
+    if (searchResults.length < 1) {
+      EmptyList = <p className="empty-list">There is no history to show</p>
+    }
 
     return (
       <div>
@@ -61,6 +69,7 @@ class HistoryView extends Component {
             ))}
           </ul>
         </div>
+        <div className="empty-container">{EmptyList}</div>
       </div>
     )
   }

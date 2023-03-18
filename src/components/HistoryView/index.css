@@ -49,3 +49,15 @@
 .list-items-container {
   list-style-type: none;
 }
+.empty-list {
+  font-family: roboto;
+  font-size: 28px;
+}
+.empty-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  align-items: center;
+}
