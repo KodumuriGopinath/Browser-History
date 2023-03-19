@@ -7,6 +7,7 @@ const HistoryItem = props => {
   const onDelete = () => {
     deleteItem(id)
   }
+
   return (
     <li className="list-container">
       <div className="list-items">
@@ -23,12 +24,17 @@ const HistoryItem = props => {
           </div>
         </div>
 
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/delete-img.png"
-          alt="delete"
-          className="delete-image"
+        <button
+          data-testId="delete"
+          type="button"
+          className="button"
           onClick={onDelete}
-        />
+        >
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/delete-img.png"
+            alt="delete"
+          />
+        </button>
       </div>
     </li>
   )

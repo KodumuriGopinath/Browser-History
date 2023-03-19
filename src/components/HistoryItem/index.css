@@ -70,3 +70,11 @@
     flex-direction: row;
   }
 }
+
+.button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 40px;
+}
